@@ -3,10 +3,6 @@ name: Build and Push Docker Image
 on:
   release:
     types: [published]
-  schedule:
-    # Nightly builds at 2 AM UTC
-    - cron: '0 2 * * *'
-  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
@@ -14,8 +10,8 @@ env:
 
 jobs:
   build-and-push:
-    # Only run on full releases or scheduled nightly builds, skip prereleases
-    if: github.event_name != 'release' || !github.event.release.prerelease
+    # Only run on full releases, skip prereleases
+    if: !github.event.release.prerelease
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -44,7 +40,7 @@ jobs:
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
-            type=raw,value=nightly,enable={{is_scheduled}}
+            type=raw,value=latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
