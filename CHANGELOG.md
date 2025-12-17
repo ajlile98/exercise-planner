@@ -1,3 +1,10 @@
+# [1.0.0-develop.2](https://github.com/ajlile98/exercise-planner/compare/v1.0.0-develop.1...v1.0.0-develop.2) (2025-12-17)
+
+
+### Features
+
+* **pwa:** add progressive web app support with service worker and manifest ([1ad9cf4](https://github.com/ajlile98/exercise-planner/commit/1ad9cf492034febdfe62ec675030cd6ee92cdda6))
+
 # 1.0.0-develop.1 (2025-12-17)
 
 
