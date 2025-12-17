@@ -17,9 +17,6 @@ RUN dotnet publish -c Release --no-build -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
 WORKDIR /app
 
-# Install Node.js for potential runtime needs
-RUN apt-get update && apt-get install -y nodejs npm && rm -rf /var/lib/apt/lists/*
-
 # Copy published app from build stage
 COPY --from=build /app/publish .
 
