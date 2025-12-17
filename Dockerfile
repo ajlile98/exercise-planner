@@ -2,7 +2,7 @@
 FROM node:22-alpine AS css-build
 WORKDIR /app
 COPY src/package.json src/package-lock.json ./
-RUN npm install --legacy-peer-deps
+RUN npm ci --omit=dev --ignore-scripts
 COPY src/wwwroot ./wwwroot
 RUN npm run build
 
