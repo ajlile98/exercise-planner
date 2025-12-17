@@ -9,7 +9,7 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
-  <Target Name="BuildTailwindCSS" BeforeTargets="Build">
+  <Target Name="BuildTailwindCSS" BeforeTargets="Build" Condition="'$(DOTNET_ENVIRONMENT)' != 'Docker'">
     <Exec Command="npm run build" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 

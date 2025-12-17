@@ -1,14 +1,23 @@
+# CSS build stage
+FROM node:22-alpine AS css-build
+WORKDIR /app
+COPY src/package.json src/package-lock.json ./
+RUN npm install --legacy-peer-deps
+COPY src/wwwroot ./wwwroot
+RUN npm run build
+
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 
-# Install Node.js for npm build
-RUN apt-get update && apt-get install -y nodejs npm && rm -rf /var/lib/apt/lists/*
-
 # Copy source code
 COPY src/ .
 
+# Copy pre-built CSS from css-build stage
+COPY --from=css-build /app/wwwroot/css/app.css ./wwwroot/css/app.css
+
 # Restore and build
+ENV DOTNET_ENVIRONMENT=Docker
 RUN dotnet restore
 RUN dotnet build -c Release --no-restore
 RUN dotnet publish -c Release --no-build -o /app/publish
