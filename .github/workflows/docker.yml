@@ -11,7 +11,7 @@ env:
 jobs:
   build-and-push:
     # Only run on full releases, skip prereleases
-    if: !github.event.release.prerelease
+    if: ${{ !github.event.release.prerelease }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
