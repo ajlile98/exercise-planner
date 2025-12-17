@@ -30,11 +30,14 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install Node dependencies
+      - name: Install root dependencies
         run: npm ci
 
+      - name: Install src dependencies
+        run: cd src && npm ci
+
       - name: Build CSS
-        run: npm run build
+        run: cd src && npm run build
 
       - name: Restore .NET dependencies
         run: dotnet restore
