@@ -1,0 +1,48 @@
+{
+  "name": "Exercise Planner",
+  "short_name": "ExercisePlanner",
+  "description": "A full-stack exercise tracking application",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0d47a1",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/favicon.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["fitness", "health"],
+  "shortcuts": [
+    {
+      "name": "Log Exercise",
+      "short_name": "Log",
+      "description": "Quickly log a new exercise",
+      "url": "/?action=log",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "any"
+        }
+      ]
+    }
+  ]
+}
