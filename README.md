@@ -288,4 +288,3 @@ Detailed best practices for various aspects:
 ## License
 
 MIT
-
