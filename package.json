@@ -1,33 +1,19 @@
 {
   "name": "exercise-planner",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Full-stack exercise tracking application",
   "scripts": {
-    "dev": "tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/app.css --watch",
-    "build": "tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/app.css",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "npx cz",
-    "release": "semantic-release",
-    "prepare": "husky install"
+    "release": "semantic-release"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@tailwindcss/cli": "^4.1.18",
-    "autoprefixer": "^10.4.23",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "daisyui": "^5.5.14",
-    "husky": "^9.1.7",
-    "postcss": "^8.5.6",
-    "semantic-release": "^24.2.9",
-    "tailwindcss": "^4.1.18"
+    "semantic-release": "^24.2.9"
   },
   "config": {
     "commitizen": {

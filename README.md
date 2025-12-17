@@ -6,52 +6,44 @@ A full-stack exercise tracking application with separated frontend and backend a
 
 ```
 exercise-planner/
-├── frontend-blazorwasm/     # Blazor WebAssembly frontend
-│   ├── App.razor
+├── src/                     # ASP.NET Core Blazor Web App
 │   ├── Program.cs
 │   ├── exercise-planner.csproj
-│   ├── exercise-planner.sln
-│   ├── package.json         # npm dependencies (Tailwind, PostCSS)
-│   ├── Layout/              # Blazor layouts
-│   ├── Pages/               # Blazor pages/components
-│   ├── wwwroot/             # Static assets, styles, service worker
+│   ├── appsettings.json
+│   ├── Components/          # Blazor components
+│   ├── Properties/
+│   ├── wwwroot/             # Static assets, styles
 │   └── exercise-planner.Tests/  # Unit tests
-├── backend-api/             # ASP.NET Core API (coming soon)
-└── .github/
-    ├── workflows/           # CI/CD automation
-    └── instructions/        # Project guidelines
+├── .github/
+│   ├── workflows/           # CI/CD automation
+│   └── instructions/        # Project guidelines
+└── README.md
 ```
 
 ## Getting Started
 
-### Frontend (Blazor WASM)
+### Application
 
 ```bash
-cd frontend-blazorwasm
+cd src
 dotnet watch
 ```
 
-The app will open at `http://localhost:5154`
+The app will open at `http://localhost:5000`
 
 ### Development Commands
 
 ```bash
-cd frontend-blazorwasm
+cd src
 
-# Watch Tailwind CSS while developing
-npm run dev
-
-# Build Tailwind CSS
-npm run build
-
-# Make a conventional commit (interactive)
-npm run commit
+# Run with hot reload
+dotnet watch
 
 # Run tests
 dotnet test
 
-# Local release simulation
-npm run release
+# Build for production
+dotnet build -c Release
 ```
 
 ## Technology Stack
@@ -71,10 +63,11 @@ npm run release
 
 ## Architecture
 
-- **Frontend**: Client-side Blazor WebAssembly with Tailwind CSS + daisyUI
-- **Backend**: ASP.NET Core API (planned)
-- **Database**: (planned)
-- **Deployment**: Separate frontend/backend deployment pipelines
+- **Framework**: Blazor Web App (.NET 10) - Full-stack with server and client components
+- **Styling**: Tailwind CSS v4 + daisyUI
+- **Testing**: xUnit
+- **PWA**: Service workers for offline support
+- **Deployment**: Single deployment unit (integrated frontend + backend)
 
 ## Features
 
