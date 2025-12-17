@@ -2,8 +2,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 
-# Copy project files
-COPY . .
+# Copy source code
+COPY src/ .
 
 # Restore and build
 RUN dotnet restore

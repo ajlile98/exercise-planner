@@ -1,11 +1,6 @@
+node_modules/
 .git
 .gitignore
-.github
-bin/
-obj/
-node_modules/
 *.user
 *.suo
 .DS_Store
-dist/
-build/
