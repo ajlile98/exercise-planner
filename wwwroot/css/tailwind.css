@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Add daisyUI plugin */
+@plugin "daisyui";
+
+/* Blazor error UI - show when blazor sets display:block */
+#blazor-error-ui:not(.hidden) {
+    display: flex !important;
+}
