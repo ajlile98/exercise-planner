@@ -1,3 +1,10 @@
+# [1.2.0-develop.2](https://github.com/ajlile98/exercise-planner/compare/v1.2.0-develop.1...v1.2.0-develop.2) (2025-12-17)
+
+
+### Features
+
+* **bump:** bump ([060d3ce](https://github.com/ajlile98/exercise-planner/commit/060d3ced7e2d08470b6b3cc36e2bc8d918c16918))
+
 # [1.2.0-develop.1](https://github.com/ajlile98/exercise-planner/compare/v1.1.0...v1.2.0-develop.1) (2025-12-17)
 
 
