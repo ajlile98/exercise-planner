@@ -1,3 +1,19 @@
+# 1.0.0 (2025-12-17)
+
+
+### Bug Fixes
+
+* **styling:** output tailwind css to wwwroot root for proper loading ([c43ae18](https://github.com/ajlile98/exercise-planner/commit/c43ae18bea321802462e0ba9c991e792adab17a4))
+* **styling:** update app.razor to reference css/app.css path ([0046e83](https://github.com/ajlile98/exercise-planner/commit/0046e837665be69f902b33968e7009fc43a4c490))
+
+
+### Features
+
+* **layout:** update project layout maybe splitting frontend and backend ([9dd55d0](https://github.com/ajlile98/exercise-planner/commit/9dd55d08826d7521cdeb9cce607547b0e24a1d40))
+* **pwa:** add progressive web app support with service worker and manifest ([1ad9cf4](https://github.com/ajlile98/exercise-planner/commit/1ad9cf492034febdfe62ec675030cd6ee92cdda6))
+* **structure:** udpated project structure again ([704211a](https://github.com/ajlile98/exercise-planner/commit/704211a22e64a8efa6a7867a01695f796ca9163d))
+* **structure:** update project structure ([0d5661b](https://github.com/ajlile98/exercise-planner/commit/0d5661b81f326bee042d30ecc388a1a9699a088b))
+
 # [1.0.0-develop.3](https://github.com/ajlile98/exercise-planner/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2025-12-17)
 
 
