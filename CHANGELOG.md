@@ -1,3 +1,11 @@
+# [1.0.0-develop.3](https://github.com/ajlile98/exercise-planner/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2025-12-17)
+
+
+### Bug Fixes
+
+* **styling:** output tailwind css to wwwroot root for proper loading ([c43ae18](https://github.com/ajlile98/exercise-planner/commit/c43ae18bea321802462e0ba9c991e792adab17a4))
+* **styling:** update app.razor to reference css/app.css path ([0046e83](https://github.com/ajlile98/exercise-planner/commit/0046e837665be69f902b33968e7009fc43a4c490))
+
 # [1.0.0-develop.2](https://github.com/ajlile98/exercise-planner/compare/v1.0.0-develop.1...v1.0.0-develop.2) (2025-12-17)
 
 
