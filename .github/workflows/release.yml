@@ -107,6 +107,3 @@ jobs:
           labels: version=${{ needs.release.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          labels: version=${{ steps.version.outputs.version }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
