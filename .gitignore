@@ -485,3 +485,5 @@ $RECYCLE.BIN/
 
 # Generated CSS files
 wwwroot/css/app.css
+*.db-shm
+*.db-wal
