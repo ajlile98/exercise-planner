@@ -49,6 +49,7 @@ jobs:
   release:
     needs: build-and-test
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
@@ -81,7 +82,7 @@ jobs:
   build-docker:
     needs: release
     runs-on: ubuntu-latest
-    if: needs.release.outputs.version != ''
+    if: github.ref == 'refs/heads/main' && needs.release.outputs.version != ''
     steps:
       - name: Checkout
         uses: actions/checkout@v4
