@@ -9,6 +9,18 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="API/" />
+    <Folder Include="API/Controllers/" />
+    <Folder Include="Data/" />
+    <Folder Include="Entities/" />
+    <Folder Include="Services/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ical.Net" Version="5.1.4" />
+  </ItemGroup>
+
   <Target Name="BuildTailwindCSS" BeforeTargets="Build" Condition="'$(DOTNET_ENVIRONMENT)' != 'Docker'">
     <Exec Command="npm run build" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
