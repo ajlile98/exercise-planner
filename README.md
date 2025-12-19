@@ -1,4 +1,4 @@
-# Exercise Planner
+# Workout Hub
 
 A full-stack exercise tracking application built with Blazor Web App (.NET 10), Tailwind CSS, and daisyUI. Features automated testing, semantic versioning, and CI/CD automation.
 
@@ -25,8 +25,8 @@ A full-stack exercise tracking application built with Blazor Web App (.NET 10), 
 
 ```bash
 # Clone the repository
-git clone https://github.com/ajlile98/exercise-planner.git
-cd exercise-planner
+git clone https://github.com/ajlile98/workout-hub.git
+cd workout-hub
 
 # Install dependencies
 npm install
