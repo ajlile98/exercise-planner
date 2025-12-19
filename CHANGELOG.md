@@ -1,3 +1,17 @@
+# [1.3.0-develop.1](https://github.com/ajlile98/workout-hub/compare/v1.2.0...v1.3.0-develop.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* update Microsoft.NET.Test.Sdk to 17.10.0 ([0ab2c8c](https://github.com/ajlile98/workout-hub/commit/0ab2c8c50b952be9244a69e20fb4406cd8b8f3ad))
+
+
+### Features
+
+* add core domain entities for exercise management ([ed91d2a](https://github.com/ajlile98/workout-hub/commit/ed91d2ae67838a854d08787fd69a05661196ea68))
+* complete Exercise CRUD with EF Core and Mapster integration ([c300412](https://github.com/ajlile98/workout-hub/commit/c300412befec53416f4a733fc07479923fa29047))
+* enable REST API and add infrastructure for entity management ([4c5c5a9](https://github.com/ajlile98/workout-hub/commit/4c5c5a9d7e2ebe774b91b0cf915ef4eb90a4a5b8))
+
 # [1.2.0](https://github.com/ajlile98/workout-hub/compare/v1.1.0...v1.2.0) (2025-12-17)
 
 
