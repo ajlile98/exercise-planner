@@ -179,6 +179,9 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .min-w-full {
     min-width: 100%;
   }

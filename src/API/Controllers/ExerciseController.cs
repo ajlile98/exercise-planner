@@ -2,46 +2,60 @@
 using WorkoutHub.DTOs;
 using WorkoutHub.Models;
 using Microsoft.AspNetCore.Mvc;
+using WorkoutHub.Data;
+using Microsoft.EntityFrameworkCore;
+using Mapster;
 
 namespace WorkoutHub.API.Controllers
 {
-    public class ExerciseController : BaseApiController
+    public class ExerciseController(AppDbContext context) : BaseApiController
     {
         // Create
         [HttpPost]
-        public async Task<ActionResult<Exercise>> CreateExercise(ExerciseDTO exerciseDTO)
+        public async Task<ActionResult<Exercise>> CreateExercise(CreateExerciseDTO exerciseDTO)
         {
-            return new Exercise
-            {
-                Id = "test",
-                Name = "Test",
-                Description = "",
-            };
+            var exercise = exerciseDTO.Adapt<Exercise>();
+            
+            context.Exercises.Add(exercise);
+            await context.SaveChangesAsync();
+            return exercise;
         }
         // Read
         [HttpGet("{id}")]
-        public async Task<ActionResult<Exercise>> GetExercise(int id)
+        public async Task<ActionResult<Exercise>> GetExercise(string id)
         {
-            return new Exercise
+            var exercise = await context.Exercises
+                                        .FirstOrDefaultAsync(o => o.Id == id);
+            if (exercise == null)
             {
-                Id = $"{id}",
-                Name = "Test",
-                Description = "",
-            };
+                return NotFound();
+            }
+            return exercise;
         }
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Exercise>>> GetExercises()
         {
-            List<Exercise> list = new();
-            list.Add(new Exercise 
-            {
-                Id = "test",
-                Name = "Test",
-                Description = "",
-            });
-            return list.AsReadOnly();
+            return await context.Exercises.ToListAsync();
         }
         // Update
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Exercise>> UpdateExercise(UpdateExerciseDTO exerciseDTO)
+        {
+            var exercise = await context.Exercises.FirstOrDefaultAsync(o => o.Id == exerciseDTO.Id);
+            if (exercise == null) return NotFound();
+            exercise = exerciseDTO.Adapt(exercise);
+            await context.SaveChangesAsync();
+            return exercise;
+        }
         // Delete
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Exercise>> DeleteExercise(string id)
+        {
+            var exercise = await context.Exercises.FirstOrDefaultAsync(o => o.Id == id);
+            if (exercise == null) return NotFound();
+            context.Exercises.Remove(exercise);
+            await context.SaveChangesAsync();
+            return exercise;
+        }
     }
 }
