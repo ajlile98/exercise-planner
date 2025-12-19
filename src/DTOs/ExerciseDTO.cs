@@ -1,6 +1,6 @@
 using System;
 
-namespace exercise_planner.DTOs;
+namespace WorkoutHub.DTOs;
 
 public class ExerciseDTO
 {

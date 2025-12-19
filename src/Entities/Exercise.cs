@@ -1,6 +1,6 @@
 using System;
 
-namespace exercise_planner.Models;
+namespace WorkoutHub.Models;
 
 public class Exercise
 {

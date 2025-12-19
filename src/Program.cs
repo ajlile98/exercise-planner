@@ -1,4 +1,4 @@
-using exercise_planner.Components;
+using WorkoutHub.Components;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);

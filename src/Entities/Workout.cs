@@ -1,7 +1,7 @@
 using System;
-using exercise_planner.Entities;
+using WorkoutHub.Entities;
 
-namespace exercise_planner.Models;
+namespace WorkoutHub.Models;
 
 public class Workout
 {

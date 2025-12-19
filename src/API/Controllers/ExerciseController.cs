@@ -1,9 +1,9 @@
 
-using exercise_planner.DTOs;
-using exercise_planner.Models;
+using WorkoutHub.DTOs;
+using WorkoutHub.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace exercise_planner.API.Controllers
+namespace WorkoutHub.API.Controllers
 {
     public class ExerciseController : BaseApiController
     {

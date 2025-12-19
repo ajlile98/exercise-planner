@@ -1,8 +1,8 @@
 using System;
 using System.Text.Json.Serialization;
-using exercise_planner.Models;
+using WorkoutHub.Models;
 
-namespace exercise_planner.Entities;
+namespace WorkoutHub.Entities;
 
 public class WorkoutExercise
 {

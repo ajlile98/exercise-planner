@@ -1,6 +1,6 @@
 using System;
 
-namespace exercise_planner.API.Controllers;
+namespace WorkoutHub.API.Controllers;
 
 public class AccountController
 {

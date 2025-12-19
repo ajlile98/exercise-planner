@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace exercise_planner.API.Controllers
+namespace WorkoutHub.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

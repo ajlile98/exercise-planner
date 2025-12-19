@@ -2,7 +2,7 @@ using System;
 using System.Text.Json.Serialization;
 using Ical.Net.DataTypes;
 
-namespace exercise_planner.Models;
+namespace WorkoutHub.Models;
 
 public class ScheduledWorkout
 {

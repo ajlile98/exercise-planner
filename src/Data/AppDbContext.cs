@@ -1,8 +1,8 @@
-using exercise_planner.Entities;
-using exercise_planner.Models;
+using WorkoutHub.Entities;
+using WorkoutHub.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace exercise_planner.Data;
+namespace WorkoutHub.Data;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
